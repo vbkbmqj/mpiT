@@ -126,7 +126,7 @@ local function pClient_init(self)
   mpiT.co_wait(self.coq)
   -- init pserver param
   if self.rank == self.cranks[1] then
-    self:async_send_param(self.pstorage)
+    self:async_send_param()
   end
   mpiT.co_wait(self.coq)
 end
